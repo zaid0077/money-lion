@@ -33,7 +33,7 @@ export default function Agreements(props) {
         agreement2: agreement2,
       };
 
-      let url = "https://5f79819fe402340016f93139.mockapi.io/api/user"; // API Maximum limit seems to be reached.
+      let url = "https://5f79819fe402340016f93139.mockapi.io/api/user"; // API Maximum limit seems to be reached. Always returning 400
       await axios
         .post(url, data)
         .then((res) => {

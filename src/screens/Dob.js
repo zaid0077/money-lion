@@ -4,8 +4,6 @@ import { ProgressBarItem } from "../components/ProgressBar";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useHistory } from "react-router-dom";
-import "../style/Common.css";
-
 
 export default function Dob(props) {
   const history = useHistory();
