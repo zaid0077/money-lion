@@ -49,7 +49,7 @@ export default function Agreements(props) {
   };
 
   useEffect(() => {
-    if (undefined == dob) {
+    if (undefined === dob) {
       history.push("/");
     }
     const interval = setInterval(() => {

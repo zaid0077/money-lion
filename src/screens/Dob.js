@@ -15,7 +15,7 @@ export default function Dob(props) {
   const userDetails = localStorage.getItem("frmDetails");
 
   useEffect(() => {
-    if (undefined == userDetails) {
+    if (undefined === userDetails) {
       history.push("/");
     }
     const interval = setInterval(() => {
@@ -48,7 +48,7 @@ export default function Dob(props) {
   const formValidation = () => {
     const dobErr = {};
     let isValid = true;
-    if (Object.prototype.toString.call(dob) != "[object Date]") {
+    if (Object.prototype.toString.call(dob) !== "[object Date]") {
       dobErr.message = "DOB Field is required and must be in date format";
       isValid = false;
     }
