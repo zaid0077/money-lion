@@ -15,7 +15,7 @@ export default function Dob() {
   const userDetails = localStorage.getItem("frmDetails");
 
   useEffect(() => {
-    if (undefined === userDetails) {
+    if (undefined == userDetails) {
       history.push("/");
     }
     const interval = setInterval(() => {

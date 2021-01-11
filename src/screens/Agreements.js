@@ -21,6 +21,22 @@ export default function Agreements(props) {
   const dob = localStorage.getItem("dob");
   const userData = localStorage.getItem("frmDetails");
 
+  useEffect(() => {
+    if (undefined == dob) {
+      history.push("/");
+    }
+    const interval = setInterval(() => {
+      setValue((oldValue) => {
+        const newValue = oldValue + 34;
+        if (newValue >= 100) {
+          clearInterval(interval);
+        }
+        return newValue;
+      });
+    }, 100);
+  }, []);
+  
+
   const finish = async () => {
     if (agreement1 && agreement2) {
       let user = JSON.parse(userData);
@@ -47,21 +63,6 @@ export default function Agreements(props) {
       alert("Agreements must be checked");
     }
   };
-
-  useEffect(() => {
-    if (undefined === dob) {
-      history.push("/");
-    }
-    const interval = setInterval(() => {
-      setValue((oldValue) => {
-        const newValue = oldValue + 34;
-        if (newValue >= 100) {
-          clearInterval(interval);
-        }
-        return newValue;
-      });
-    }, 100);
-  }, []);
 
   return (
     <div>
