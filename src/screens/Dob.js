@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useHistory } from "react-router-dom";
 
-export default function Dob(props) {
+export default function Dob() {
   const history = useHistory();
 
   const [dob, setDob] = useState("");
