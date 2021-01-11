@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Header from "./components/Header";
+import Welcome from "./screens/Welcome"
+import PersonalDetails from './screens/PersonalDetails'
+import Dob from './screens/Dob'
+import Agreement from './screens/Agreements'
+import NotFound from './screens/NotFound'
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <Header />
+        <Switch>
+          <Route path='/onboard-test.moneylion.com/welcome' exact component={Welcome}></Route>
+          <Route path='/onboard-test.moneylion.com/personalDetails' exact component={PersonalDetails}></Route>
+          <Route path='/onboard-test.moneylion.com/dob' exact component={Dob}></Route>
+          <Route path='/onboard-test.moneylion.com/agreement' exact component={Agreement}></Route>
+          <Route path='/' exact component={Welcome}></Route>
+          <Route component={NotFound} />
+        </Switch>
+        </div>
+    </Router>
   );
 }
 

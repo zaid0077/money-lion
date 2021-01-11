@@ -1,0 +1,13 @@
+.checkbox-input {
+    margin-right: 10px;
+}
+
+input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    background-color: #2ECFBF
+}
+
+.agreement-label {
+    color: #2ECFBF
+}

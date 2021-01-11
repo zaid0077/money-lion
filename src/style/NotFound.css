@@ -1,0 +1,15 @@
+.not-found-container {
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+    font-size: 40px;
+}
+
+.not-found {
+  font-size: 100px;
+  color: white;
+}
