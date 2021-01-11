@@ -49,7 +49,7 @@ export default function Dob(props) {
     const dobErr = {};
     let isValid = true;
     if (Object.prototype.toString.call(dob) !== "[object Date]") {
-      dobErr.message = "DOB Field is required and must be in date format";
+      dobErr.message = "DOB Field is required and must be in above format";
       isValid = false;
     }
 
