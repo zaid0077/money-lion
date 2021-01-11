@@ -13,6 +13,7 @@ export default function Header() {
           className="header-logo"
           width="407"
           height="124"
+          onClick={() => localStorage.clear()}
         />
       </Link>
     </div>
